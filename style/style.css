@@ -26,6 +26,7 @@ body {
     height: 100vh;
     color: var(--text-color);
     background-color: #000000;
+    background-attachment: fixed;
     background-image: 
         /* radial-gradient(circle at 80% 40%, rgba(236, 10, 206, 0.95), transparent 50%), */ radial-gradient(
             circle 300px at 90% 30%,
@@ -95,6 +96,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 header {
     display: flex;
     flex-direction: column;
@@ -115,23 +117,51 @@ header p {
     font-size: 1.2rem;
 }
 
+header > ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
 header .button {
-    max-width: 300px;
-    min-width: 300px;
-    padding: 15px;
+    padding: 0.5rem;
     border-radius: 10px;
     border: 2px solid #b213df;
-    background-color: transparent;
+    background-color: rgba(178, 19, 223, 0);
     color: white;
     font-size: 1rem;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 header .button:hover {
-    background-color: #b213df;
+    background-color: rgba(178, 19, 223, 1);
+    box-shadow: 0 0 10px rgba(178, 19, 223, 1);
 }
 
-.main {
+header .button:active {
+    transform: translateY(-2px) scale(0.95);
+}
+
+.about-me {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-backdrop-filter: blur(20px); /* Safari support */
+    backdrop-filter: blur(20px); /* the frost */
+}
+
+.about-me > h2 {
+    font-size: 2rem;
+}
+.about-me > p {
+    max-width: 800px;
+    vertical-align: bottom;
+}
+
+#main-container {
     padding: 2rem;
 }
 
