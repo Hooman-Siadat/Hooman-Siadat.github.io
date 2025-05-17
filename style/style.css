@@ -1,0 +1,210 @@
+:root {
+    --bg-color: #0d0d0d;
+    --accent-gradient: linear-gradient(135deg, #ff00cc, #3333ff);
+    --text-color: #f4f4f4;
+    --subtext-color: #8899aa;
+    --card-bg: #1a1a1a;
+    /* --highlight1: #ff4f81; */
+    --highlight2: #5f00b8;
+    /* --highlight3: #0f0c13; */
+    --highlight4: #b213df;
+    --border-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    line-height: 1.6;
+    height: 100vh;
+    color: var(--text-color);
+    background-color: #000000;
+    background-image: 
+        /* radial-gradient(circle at 80% 40%, rgba(236, 10, 206, 0.95), transparent 50%), */ radial-gradient(
+            circle 300px at 90% 30%,
+            rgba(203, 5, 243, 0.7) 0%,
+            rgba(203, 5, 243, 0.5) 30%,
+            rgba(203, 5, 243, 0.3) 55%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle 300px at 80% 20%,
+            rgba(241, 7, 97, 0.7) 0%,
+            rgba(241, 7, 97, 0.5) 20%,
+            rgba(241, 7, 97, 0.3) 55%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle 200px at 80% 20%,
+            rgba(241, 7, 97, 0.7) 0%,
+            rgba(241, 7, 97, 0.5) 20%,
+            rgba(241, 7, 97, 0.3) 55%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle 100px at 95% 40%,
+            rgba(240, 140, 10, 0.7) 0%,
+            rgba(240, 140, 10, 0.5) 20%,
+            rgba(240, 140, 10, 0.3) 55%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle 80px at 95% 40%,
+            rgba(233, 7, 233, 0.7) 0%,
+            rgba(233, 7, 233, 0.5) 20%,
+            rgba(233, 7, 233, 0.3) 55%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle 500px at 95% 10%,
+            rgba(124, 7, 233, 0.7) 0%,
+            rgba(124, 7, 233, 0.5) 20%,
+            rgba(124, 7, 233, 0.3) 55%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle 100px at -2% 40%,
+            rgba(240, 10, 190, 0.7) 0%,
+            rgba(240, 10, 190, 0.5) 20%,
+            rgba(240, 10, 190, 0.3) 55%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle 200px at -2% 0%,
+            rgba(240, 10, 190, 0.7) 0%,
+            rgba(240, 10, 190, 0.5) 20%,
+            rgba(240, 10, 190, 0.3) 55%,
+            transparent 100%
+        ),
+        radial-gradient(
+            circle 200px at 15% 80%,
+            rgba(240, 10, 190, 0.7) 0%,
+            rgba(240, 10, 190, 0.5) 20%,
+            rgba(240, 10, 190, 0.3) 55%,
+            transparent 100%
+        ),
+        linear-gradient(0deg, #000001, #010001);
+    background-blend-mode: screen, lighten, lighten, normal;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 5rem;
+    color: #ffaaff;
+}
+
+header p {
+    color: var(--subtext-color);
+    font-size: 1.2rem;
+}
+
+header .button {
+    max-width: 300px;
+    min-width: 300px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #b213df;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+header .button:hover {
+    background-color: #b213df;
+}
+
+.main {
+    padding: 2rem;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    max-height: 200px;
+    background: linear-gradient(0deg, #000001, #010001);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 10px 2px #ff00cc;
+}
+
+.card h3 {
+    color: var(--highlight4);
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: var(--subtext-color);
+    font-size: 0.95rem;
+}
+
+.card > a {
+    text-decoration: none;
+    background-color: #b213df;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.filter-bar {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.filter-bar button {
+    background: none;
+    border: 2px solid var(--highlight2);
+    color: var(--subtext-color);
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter-bar button:hover,
+.filter-bar button.active {
+    background: var(--highlight2);
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    color: var(--subtext-color);
+    font-size: 0.9rem;
+}

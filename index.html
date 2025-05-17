@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hooman Siadat Portfolio</title>
-</head>
-<body>
-    <h1>Projects</h1>
-    <ul>
-        <li>
-            <a href="https://github.com/Hooman-Siadat/Hooman-Siadat.github.io/tree/main/projects/bank_statement_analyzer">Bank Statement Analyzer</a>
-        </li>
-        <li>
-            <a href="https://github.com/Hooman-Siadat/Hooman-Siadat.github.io/tree/main/projects/store_user_input">Store User Input</a>
-        </li>
-    </ul>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FirstName LastName | Developer Portfolio</title>
+        <link rel="stylesheet" href="./style/style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Hooman Siadat</h1>
+            <p>Software Developer | Creative Technologist</p>
+            <a class="button" href="#projects">Projects</a>
+        </header>
+
+        <div id="projects" class="main">
+            <section class="filter-bar">
+                <button class="active">All</button>
+                <button>Web</button>
+                <button>Apps</button>
+                <button>Tools</button>
+            </section>
+
+            <section class="projects">
+                <div class="card">
+                    <h3>To-Do App</h3>
+                    <p>A minimal productivity app to manage your daily tasks with ease.</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="card">
+                    <h3>Weather Dashboard</h3>
+                    <p>Real-time weather app using OpenWeatherMap API and sleek UI.</p>
+                </div>
+                <div class="card">
+                    <h3>Markdown Previewer</h3>
+                    <p>Live preview your Markdown code with this React-powered tool.</p>
+                </div>
+                <div class="card">
+                    <h3>Portfolio Generator</h3>
+                    <p>CLI tool to scaffold portfolio projects in seconds with modern stack.</p>
+                </div>
+            </section>
+
+            <footer>
+                <p>&copy; 2025 Hooman Siadat. Built with love and JavaScript.</p>
+            </footer>
+        </div>
+        <script src="./js/main.js"></script>
+    </body>
 </html>
